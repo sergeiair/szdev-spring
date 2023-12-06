@@ -1,0 +1,4 @@
+2023-12-05T00:15:49.274+01:00  INFO 1231 --- [SpringApplicationShutdownHook] com.sz.dev.db.sql.pool.ConnectionPool    : Clean connection pool
+2023-12-05T00:15:49.275+01:00  INFO 1231 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-12-05T00:15:49.276+01:00  INFO 1231 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-12-05T00:15:49.278+01:00  INFO 1231 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
