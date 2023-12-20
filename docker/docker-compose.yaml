@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  postgres:
+    image: postgres:latest
+    container_name: sz_dev_postgres_v1
+    environment:
+      POSTGRES_DB: sz_dev_db_v1
+      POSTGRES_USER: sz_dev_user
+      POSTGRES_PASSWORD: rer9Ohdpdb
+    ports:
+      - "5433:5432"
+    volumes:
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql

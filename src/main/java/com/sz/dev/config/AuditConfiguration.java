@@ -16,6 +16,7 @@ public class AuditConfiguration {
 
     @Bean
     public AuditorAware<String> auditorAware() {
+
         return () -> Optional.of("com.sz.dev");
     }
 }

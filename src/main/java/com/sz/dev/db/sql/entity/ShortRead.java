@@ -1,23 +1,17 @@
 package com.sz.dev.db.sql.entity;
 
-import com.sz.dev.bpp.audit.Auditing;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.time.LocalDate;
-import java.util.HashMap;
-import java.util.Map;
-
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
 @Entity
-@Table(name = "short_read")
-//@Audited(targetAuditMode = RelationTargetAuditMode.NOT_AUDITED)
+@Table(name = "szdev_short_reads")
 public class ShortRead extends AuditingEntity<Integer> {
 
     @Id
@@ -33,11 +27,14 @@ public class ShortRead extends AuditingEntity<Integer> {
     @Column(unique = true, nullable = false)
     private String content;
 
-    @Builder.Default
+    @Column(unique = true, nullable = false, name = "url_alias")
+    private String urlAlias;
+
+    /*@Builder.Default
     @ElementCollection
     @CollectionTable(name = "short_read_locales", joinColumns = @JoinColumn(name = "short_read_id"))
     @MapKeyColumn(name = "lang")
     @Column(name = "description")
-    private Map<String, String> locales = new HashMap<>();
+    private Map<String, String> locales = new HashMap<>();*/
 }
 

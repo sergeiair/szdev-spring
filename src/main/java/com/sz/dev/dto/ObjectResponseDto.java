@@ -1,12 +1,14 @@
 package com.sz.dev.dto;
 
 import jakarta.annotation.Nullable;
-import lombok.Getter;
+import lombok.Builder;
 import lombok.RequiredArgsConstructor;
 
+import java.util.List;
+
 @RequiredArgsConstructor
-public class PrimitiveResponseDto {
-    public final Object data;
-    public final Boolean status = true;
+public class ObjectResponseDto<T> {
+    public final T data;
+    public final Boolean status;
     public final @Nullable String error;
 }

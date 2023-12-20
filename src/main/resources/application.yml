@@ -1,6 +1,6 @@
 db:
   username: ${username.value:postgres}
-  password: pass
+  password: rer9Ohdpdb
   driver: PostgresDriver
   url: postgres:5432
   hosts: localhost,127.0.0.1
@@ -35,15 +35,15 @@ spring:
     format:
       date: iso
   datasource:
-    url: jdbc:postgresql://localhost:5433/postgres
-    username: postgres
-    password: pass
+    url: jdbc:postgresql://localhost:5433/sz_dev_db_v1
+    username: sz_dev_user
+    password: rer9Ohdpdb
     driver-class-name: org.postgresql.Driver
   jpa:
     properties.hibernate:
       batch_size: 50
       fetch_size: 50
-      show_sql: true
+      show_sql: false
       format_sql: true
       hbm2ddl.auto: validate
     open-in-view: false
