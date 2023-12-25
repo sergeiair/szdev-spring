@@ -6,17 +6,24 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
 @Entity
 @Table(name = "szdev_short_reads")
-public class ShortRead extends AuditingEntity<Integer> {
+public class ShortReadEntity extends AuditingEntity<Integer> {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
+
+    @Column(unique = true, nullable = false)
+    private Boolean published;
 
     @Column(unique = true, nullable = false)
     private String title;
@@ -30,11 +37,12 @@ public class ShortRead extends AuditingEntity<Integer> {
     @Column(unique = true, nullable = false, name = "url_alias")
     private String urlAlias;
 
-    /*@Builder.Default
-    @ElementCollection
-    @CollectionTable(name = "short_read_locales", joinColumns = @JoinColumn(name = "short_read_id"))
-    @MapKeyColumn(name = "lang")
-    @Column(name = "description")
-    private Map<String, String> locales = new HashMap<>();*/
+    @OneToMany
+    @CollectionTable(
+            name = "short_read_tags",
+            joinColumns = @JoinColumn(name = "short_read_id")
+    )
+    @MapKeyColumn(name = "tags_id")
+    private List<TagEntity> tags;
 }
 

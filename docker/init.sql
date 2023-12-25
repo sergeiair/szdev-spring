@@ -1,12 +1,4 @@
-CREATE TABLE IF NOT EXISTS szdev_tags
-(
-    id
-        SERIAL
-        PRIMARY
-            KEY,
-    text
-        VARCHAR(255)
-);
+
 
 CREATE TABLE IF NOT EXISTS szdev_short_reads
 (
@@ -23,6 +15,27 @@ CREATE TABLE IF NOT EXISTS szdev_short_reads
     preview     VARCHAR(255),
 
     content     TEXT,
+    published   BOOLEAN,
     url_alias   VARCHAR(255),
     locale_code VARCHAR(3)
+);
+
+CREATE TABLE IF NOT EXISTS szdev_tags
+(
+    id
+                SERIAL
+        PRIMARY
+            KEY,
+    published
+        BOOLEAN,
+    content     VARCHAR(100)
+);
+
+
+CREATE TABLE IF NOT EXISTS short_read_tags
+(
+    short_read_id INT REFERENCES szdev_short_reads (id) ON DELETE CASCADE ,
+    tag_id INT,
+    description     VARCHAR(255),
+    PRIMARY KEY (short_read_id, tag_id)
 );
