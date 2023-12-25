@@ -1,9 +1,7 @@
 package com.sz.dev.dto.shortRead;
 
-import com.sz.dev.db.sql.entity.ShortReadEntity;
 import com.sz.dev.db.sql.entity.TagEntity;
 import lombok.*;
-import lombok.experimental.SuperBuilder;
 
 import java.time.LocalDate;
 import java.util.List;

@@ -1,6 +1,6 @@
 cd ~/.ssh/
 
-sudo ssh -i aws_go_2 ec2-user@ec2-54-93-92-212.eu-central-1.compute.amazonaws.com
+sudo ssh -i aws_go_2 ec2-user@ec2-52-29-179-8.eu-central-1.compute.amazonaws.com
 
 
 

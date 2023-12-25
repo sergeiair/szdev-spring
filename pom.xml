@@ -17,6 +17,7 @@
 		<java.version>17</java.version>
 	</properties>
 	<dependencies>
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
@@ -82,20 +83,9 @@
 
 		<dependency>
 			<groupId>com.amazonaws</groupId>
-			<artifactId>aws-java-sdk-cognitoidentity</artifactId>
-			<version>1.12.621</version>
+			<artifactId>aws-java-sdk-cognitoidp</artifactId>
+			<version>1.12.625</version>
 		</dependency>
-		<dependency>
-			<groupId>com.amazonaws</groupId>
-			<artifactId>aws-java-sdk</artifactId>
-			<version>1.12.620</version>
-		</dependency>
-		<dependency>
-			<groupId>com.amazonaws</groupId>
-			<artifactId>aws-java-sdk-core</artifactId>
-			<version>1.12.620</version>
-		</dependency>
-
     </dependencies>
 
 	<build>
@@ -104,6 +94,7 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<configuration>
+					<executable>true</executable>
 					<image>
 						<builder>paketobuildpacks/builder-jammy-base:latest</builder>
 					</image>

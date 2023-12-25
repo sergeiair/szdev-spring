@@ -1,6 +1,6 @@
 cd ~/.ssh/
 
-sudo scp -i aws_go_2 /Users/sergeizh/IdeaProjects/sz-dev/target/demo-0.0.1-SNAPSHOT.jar ec2-user@ec2-3-70-202-70.eu-central-1.compute.amazonaws.com:~/
+sudo scp -i aws_go_2 /Users/sergeizh/IdeaProjects/sz-dev/target/SZ-0.0.1-SNAPSHOT.jar ec2-user@ec2-52-29-179-8.eu-central-1.compute.amazonaws.com:~/sz-dev-run/srv/run.jar
 
 
 

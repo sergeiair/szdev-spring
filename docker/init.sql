@@ -36,6 +36,7 @@ CREATE TABLE IF NOT EXISTS short_read_tags
 (
     short_read_id INT REFERENCES szdev_short_reads (id) ON DELETE CASCADE ,
     tag_id INT,
+    tags_id INT,
     description     VARCHAR(255),
     PRIMARY KEY (short_read_id, tag_id)
 );
