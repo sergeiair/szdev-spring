@@ -1,0 +1,37 @@
+
+
+
+.p-1 {
+    padding: var(--base-gap);
+}
+
+.p-2 {
+    padding: var(--x2-gap);
+}
+
+.p-3 {
+    padding: var(--x3-gap);
+}
+
+.p-4 {
+    padding: var(--x4-gap);
+}
+
+.p-5 {
+    padding: var(--x5-gap);
+}
+
+.p-6 {
+    padding: var(--x6-gap);
+}
+
+.px {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.py {
+    padding-left: 0;
+    padding-right: 0;
+}
+

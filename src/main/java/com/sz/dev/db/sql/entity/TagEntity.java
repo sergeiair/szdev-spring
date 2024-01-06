@@ -20,5 +20,8 @@ public class TagEntity implements BaseEntity<Integer> {
 
     @Column(unique = true, nullable = false)
     private String content;
+
+    @Column(unique = false, nullable = false)
+    private Boolean published;
 }
 

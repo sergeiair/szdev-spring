@@ -1,0 +1,22 @@
+
+.w-100 {
+    width: 100%;
+}
+
+.mx-auto {
+    margin: 0 auto;
+}
+
+.text-primary {
+    color: var(--primary);
+}
+
+.text-main {
+    color: var(--color);
+}
+
+@media only screen and (max-width: 991px) {
+    .sm-mx-auto {
+        margin: 0 auto;
+    }
+}

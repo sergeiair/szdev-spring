@@ -2,8 +2,6 @@ package com.sz.dev.dto;
 
 import lombok.*;
 
-import java.time.LocalDate;
-
 @Value
 @Getter
 @Builder
@@ -12,4 +10,5 @@ import java.time.LocalDate;
 public class TagDto {
     int id;
     String content;
+    Boolean published;
 }

@@ -27,5 +27,6 @@ public class TagsModifyMapper implements Mapper<TagDto, TagEntity> {
     private void copy(TagDto tagDto, TagEntity tagEntity) {
         tagEntity.setContent(tagDto.getContent());
         tagEntity.setId(tagDto.getId());
+        tagEntity.setPublished(tagDto.getPublished());
     }
 }

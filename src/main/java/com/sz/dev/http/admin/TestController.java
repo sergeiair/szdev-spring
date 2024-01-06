@@ -1,4 +1,4 @@
-package com.sz.dev.http.controllers;
+package com.sz.dev.http.admin;
 
 import com.amazonaws.services.dynamodbv2.AmazonDynamoDB;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBMapper;
@@ -14,7 +14,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 
-@Controller
 @RestController
 @RequiredArgsConstructor
 public class TestController {

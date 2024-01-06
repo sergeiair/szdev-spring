@@ -13,10 +13,10 @@ public class TagsReadMapper implements Mapper<TagEntity, TagDto> {
 
     @Override
     public TagDto map(TagEntity object) {
-
         return new TagDto(
                 object.getId(),
-                object.getContent()
+                object.getContent(),
+                object.getPublished()
         );
     }
 }

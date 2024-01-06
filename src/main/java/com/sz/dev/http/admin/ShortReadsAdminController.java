@@ -15,7 +15,6 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
 import java.util.List;
 
-@Controller
 @RestController
 @RequiredArgsConstructor
 @EnableWebMvc
@@ -24,7 +23,6 @@ public class ShortReadsAdminController {
 
     private final ShortReadService shortReadService;
 
-    @CrossOrigin(origins = "http://localhost:3000")
     @GetMapping()
     public ResponseEntity<ListResponseDto> findAll(@RequestHeader("Authorization") String bearerToken) {
         List<ShortReadDto> shortReadItemsList = shortReadService.findAllWithTags();
@@ -34,7 +32,6 @@ public class ShortReadsAdminController {
         );
     }
 
-    @CrossOrigin(origins = "http://localhost:3000")
     @PostMapping()
     public ResponseEntity<ObjectResponseDto<ShortReadDto>> create(@RequestBody ShortReadWriteDto shortReadDto) {
         var item = shortReadService.create(shortReadDto);
@@ -44,7 +41,6 @@ public class ShortReadsAdminController {
         );
     }
 
-    @CrossOrigin(origins = "http://localhost:3000")
     @PutMapping()
     public ResponseEntity<ObjectResponseDto<ShortReadDto>> update(@RequestBody ShortReadWriteDto shortReadDto) {
         var item = shortReadService.update(shortReadDto);

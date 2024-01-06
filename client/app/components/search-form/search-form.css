@@ -1,0 +1,35 @@
+
+.search-form {
+    position: relative;
+
+}
+
+.search-results-item {
+    --color: var(--primary-text);
+}
+
+.search-results {
+    max-height: 25vh;
+    overflow-y: auto;
+    border-radius: 0 0 15px 15px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+}
+
+.search-results-nothing {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+    cursor: pointer;
+}
+
+.search-results::-webkit-scrollbar {
+    width: 8px;
+}
+
+.search-results::-webkit-scrollbar-track {
+    background-color: var(--primary-pastel);
+    border-radius: 100px;
+}
+
+.search-results::-webkit-scrollbar-thumb {
+    background-color: var(--primary);
+    border-radius: 100px;
+}

@@ -1,0 +1,61 @@
+
+
+[data-theme="light"],
+:root:not([data-theme="dark"]) {
+    --primary-text: #1d1d1d;
+    --primary: #d81b60;
+    --primary-darker: #9F073BFF;
+    --primary-pastel: #e7c6cf;
+    --primary-hover: #c2185b;
+    --primary-focus: var(--primary-pastel);
+    --primary-inverse: #FFF;
+    --background-color: #FFF;
+    --primary-pastel-shadow: var(--primary-pastel) 0px 4px 12px;
+}
+
+
+@media only screen and (prefers-color-scheme: dark) {
+    :root:not([data-theme]) {
+        --primary-text: #FFF;
+        --primary: #d81b60;
+        --primary-darker: #9F073BFF;
+        --primary-pastel: #e7c6cf;
+        --primary-hover: #e91e63;
+        --primary-focus: var(--primary-pastel);
+        --primary-inverse: #FFF;
+        --background-color: #11191f;
+        --primary-pastel-shadow: none;
+    }
+}
+
+
+[data-theme="dark"] {
+    --primary-text: #FFF;
+    --primary: #d81b60;
+    --primary-darker: #9F073BFF;
+    --primary-pastel: #e7c6cf;
+    --primary-hover: #e91e63;
+    --primary-focus: var(--primary-pastel);
+    --primary-inverse: #FFF;
+    --background-color: #11191f;
+    --primary-pastel-shadow: none;
+}
+
+:root {
+    --form-element-active-border-color: var(--primary);
+    --form-element-focus-color: var(--primary-focus);
+    --switch-color: var(--primary-inverse);
+    --switch-checked-background-color: var(--primary);
+    --base-gap: .25rem;
+    --font-size: 16px;
+    --border-radius: 100px;
+    --x2-gap: calc(var(--base-gap) * 2);
+    --x3-gap: calc(var(--base-gap) * 4);
+    --x4-gap: calc(var(--base-gap) * 6);
+    --x5-gap: calc(var(--base-gap) * 8);
+    --x6-gap: calc(var(--base-gap) * 10);
+    --x7-gap: calc(var(--base-gap) * 12);
+}
+
+
+

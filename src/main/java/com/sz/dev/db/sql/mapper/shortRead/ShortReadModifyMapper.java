@@ -35,6 +35,6 @@ public class ShortReadModifyMapper implements Mapper<ShortReadWriteDto, ShortRea
         shortReadEntity.setModifiedAt(shortReadDto.getModified());
         shortReadEntity.setUrlAlias(shortReadDto.getUrlAlias());
         shortReadEntity.setTags(shortReadDto.getTags().stream()
-                .map(id -> new TagEntity(id, "")).toList());
+                .map(id -> new TagEntity(id, "", false)).toList());
     }
 }

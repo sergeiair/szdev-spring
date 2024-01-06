@@ -1,0 +1,12 @@
+
+.last-posts-wrap {
+    @media only screen and (max-width: 991px) {
+        margin-bottom: var(--x4-gap);
+    }
+}
+
+.last-posts-item {
+    color: var(--primary-text);
+    font-weight: normal;
+    font-size: 16px;
+}

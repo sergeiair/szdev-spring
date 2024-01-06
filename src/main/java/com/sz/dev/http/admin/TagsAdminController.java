@@ -14,7 +14,6 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
 import java.util.List;
 
-@Controller
 @RestController
 @RequiredArgsConstructor
 @EnableWebMvc
@@ -23,7 +22,6 @@ public class TagsAdminController {
 
     private final TagsService tagsService;
 
-    @CrossOrigin(origins = "http://localhost:3000")
     @GetMapping()
     public ResponseEntity<ListResponseDto> findAll(@RequestHeader("Authorization") String bearerToken) {
         List<TagDto> tagsItemsList = tagsService.findAll();
@@ -33,7 +31,6 @@ public class TagsAdminController {
         );
     }
 
-    @CrossOrigin(origins = "http://localhost:3000")
     @PostMapping()
     public ResponseEntity<ObjectResponseDto<TagDto>> create(@RequestBody TagDto TagDto) {
         var item = tagsService.create(TagDto);
@@ -43,7 +40,6 @@ public class TagsAdminController {
         );
     }
 
-    @CrossOrigin(origins = "http://localhost:3000")
     @PutMapping()
     public ResponseEntity<ObjectResponseDto<TagDto>> update(@RequestBody TagDto TagDto) {
         var item = tagsService.update(TagDto);

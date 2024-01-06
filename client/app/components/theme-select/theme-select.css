@@ -1,0 +1,25 @@
+
+
+.sz-theme-button {
+    width: 30px;
+    height: 30px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: transparent;
+    border: 0;
+    margin-bottom: 0;
+
+    &:focus {
+        outline: 0;
+        box-shadow: none;
+    }
+}
+
+.sz-theme-button-dark {
+    background-image: url("~/assets/moon.svg")
+}
+
+.sz-theme-button-light {
+    background-image: url("~/assets/sun.svg")
+}
+

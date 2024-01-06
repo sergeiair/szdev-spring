@@ -1,0 +1,72 @@
+
+
+.top-logo-wrap {
+    @media only screen and (max-width: 991px) {
+        box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+    }
+}
+
+.theme-selector {
+    @media only screen and (max-width: 991px) {
+        position: absolute;
+        right: 1rem;
+        top:1rem;
+    }
+}
+
+.top-logo {
+    --logo-light: url("~/assets/logo-light.svg");
+    --logo-dark: url("~/assets/logo.svg");
+
+    display: inline-block;
+    width: 180px;
+    height: 70px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: var(--logo-light);
+    background-position: center;
+
+    @media only screen and (max-width: 991px) {
+        width: 120px;
+        height: 60px;
+    }
+}
+
+.menu-item {
+    color: var(--primary-text);
+    border-bottom: 1px solid var(--primary-text);
+    text-decoration: none;
+}
+
+.menu-item:hover {
+    border-color: var(--primary);
+}
+
+
+[data-theme="light"] {
+    .top-logo {
+        background-image: var(--logo-dark)
+    }
+}
+
+[data-theme="dark"] {
+    .top-logo {
+        background-image: var(--logo-light)
+    }
+}
+
+@media only screen and (prefers-color-scheme: light) {
+    :root:not([data-theme]) {
+        .top-logo {
+            background-image: var(--logo-dark)
+        }
+    }
+}
+
+@media only screen and (prefers-color-scheme: dark) {
+    :root:not([data-theme]) {
+        .top-logo {
+            background-image: var(--logo-light)
+        }
+    }
+}

@@ -22,7 +22,7 @@ public class ShortReadEntity extends AuditingEntity<Integer> {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @Column(unique = true, nullable = false)
+    @Column(unique = false, nullable = false)
     private Boolean published;
 
     @Column(unique = true, nullable = false)

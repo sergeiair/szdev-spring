@@ -1,0 +1,45 @@
+
+
+.tag-item-wrap {
+    list-style: none;
+}
+
+.tag-item  {
+    color: var(--primary-inverse);
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    text-decoration: none;
+    background: linear-gradient(-45deg, var(--primary), var(--primary-darker));
+    background-size: 100% 100%;
+    padding: var(--base-gap) var(--x4-gap);
+    font-size: .8rem;
+    border-radius: 100px;
+    box-shadow: var(--primary-pastel-shadow);
+}
+
+.tag-item:hover {
+    animation: gradient 1s ease forwards;
+    box-shadow: none;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+        background-size: 200% 200%;
+    }
+    50% {
+        background-position: 100% 50%;
+        background-size: 300% 300%;
+
+    }
+    100% {
+        background-position: 0% 50%;
+        background-size: 400% 400%;
+
+    }
+}
+
+
+

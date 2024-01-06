@@ -34,3 +34,6 @@ build/
 
 src/main/resources/application.properties
 src/main/resources/aws.properties
+
+client/node_modules
+client/.idea

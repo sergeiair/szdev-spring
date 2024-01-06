@@ -14,7 +14,6 @@ public class ShortReadReadMapper implements Mapper<ShortReadEntity, ShortReadDto
 
     @Override
     public ShortReadDto map(ShortReadEntity object) {
-
         return ShortReadDto.builder()
                 .id(object.getId())
                 .published(object.getPublished())

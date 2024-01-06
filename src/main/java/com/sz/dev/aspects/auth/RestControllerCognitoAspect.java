@@ -35,7 +35,6 @@ public class RestControllerCognitoAspect {
                 return joinPoint.proceed();
             } else {
                 return new ResponseEntity<String>("Unauthorized", HttpStatus.UNAUTHORIZED);
-
             }
         }
 
