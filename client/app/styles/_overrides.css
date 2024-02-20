@@ -24,10 +24,11 @@ article {
 ul, ol {
     --spacing: 0;
     --typography-spacing-vertical: var(--x2-gap);
+    padding-left: var(--x3-gap);
 }
 
 section {
-    margin-bottom: var(--x3-gap);
+    margin-bottom: 0;
 }
 
 [role=link]:focus, a:focus {

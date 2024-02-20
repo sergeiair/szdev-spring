@@ -1,0 +1,5 @@
+
+.public-page {
+    padding-top: calc(var(--top-bar-height) + var(--x7-gap));
+    min-height: calc(100vh - var(--footer-height));
+}

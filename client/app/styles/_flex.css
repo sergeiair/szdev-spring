@@ -1,11 +1,20 @@
 
+.flex {
+    display: flex;
+}
+
 .flex-center-between,
 .flex-center-center,
 .flex-center-end,
-.flex-center {
+.flex-center,
+.flex-center-auto {
     display: flex;
     align-items: center;
     width: 100%;
+}
+
+.flex-center-auto {
+    width: auto;
 }
 
 .flex-column {
@@ -22,6 +31,10 @@
 
 .flex-center-end {
     justify-content: end;
+}
+
+.justify-content-start {
+    justify-content: start;
 }
 
 .flex-gap-1 {

@@ -42,7 +42,7 @@ public class ShortReadEntity extends AuditingEntity<Integer> {
             name = "short_read_tags",
             joinColumns = @JoinColumn(name = "short_read_id")
     )
-    @MapKeyColumn(name = "tag_id")
+    @MapKeyColumn(name = "tags_id")
     @Column(name = "description")
     private List<TagEntity> tags;
 }

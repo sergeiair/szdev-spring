@@ -86,6 +86,12 @@
 			<artifactId>aws-java-sdk-cognitoidp</artifactId>
 			<version>1.12.625</version>
 		</dependency>
+
+		<dependency>
+			<groupId>com.rollbar</groupId>
+			<version>[1.0,)</version>
+			<artifactId>rollbar-java</artifactId>
+		</dependency>
     </dependencies>
 
 	<build>

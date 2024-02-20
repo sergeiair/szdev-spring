@@ -1,0 +1,35 @@
+
+.call-stack-card, .heap-card {
+    min-width: 200px;
+    max-width: 200px;
+    height: 50vh;
+    overflow-y: scroll;
+}
+
+.fn-card {
+    padding: var(--base-gap) var(--x3-gap);
+    margin-bottom: var(--base-gap);
+    border-radius: 5px;
+    background-color: var(--primary-pastel);
+    font-size: .8rem;
+}
+
+.heap-card {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+}
+
+.heap-card-item-marked,
+.heap-card-item-stored {
+    border-radius: 3px;
+    background-color: var(--secondary-text);
+    width: 100%;
+    height: 100%;
+}
+
+.heap-card-item-stored {
+    background-color: var(--primary-pastel);
+}

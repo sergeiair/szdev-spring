@@ -1,0 +1,7 @@
+
+footer {
+    height: var(--footer-height);
+    padding: var(--x3-gap);
+    background-color: var(--background-alt-color);
+
+}

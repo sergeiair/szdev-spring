@@ -1,0 +1,42 @@
+./mvnw clean package
+
+cd ./target
+
+cp -f SZ-0.0.1-SNAPSHOT.jar /Users/sergeizh/IdeaProjects/sz-dev-run
+
+####
+
+cd /Users/sergeizh/IdeaProjects/sz-dev-run/client
+
+rm -r build
+rm -r public/build
+
+cd /Users/sergeizh/IdeaProjects/sz-dev-run/client-admin
+
+rm -r build
+rm -r public/build
+
+####
+
+cd /Users/sergeizh/IdeaProjects/sz-dev/client
+
+npm run build
+
+cp -r  ./build /Users/sergeizh/IdeaProjects/sz-dev-run/client
+cp -r  ./public/build /Users/sergeizh/IdeaProjects/sz-dev-run/client/public/
+cp -r  ./public/files /Users/sergeizh/IdeaProjects/sz-dev-run/client/public/
+cp -r  ./public/videos /Users/sergeizh/IdeaProjects/sz-dev-run/client/public/
+cp -r  ./public/images /Users/sergeizh/IdeaProjects/sz-dev-run/client/public/
+
+cd /Users/sergeizh/IdeaProjects/sz-dev-web-admin
+
+npm run build
+
+cp -r  ./build /Users/sergeizh/IdeaProjects/sz-dev-run/client-admin
+cp -r  ./public/build /Users/sergeizh/IdeaProjects/sz-dev-run/client-admin/public/
+
+cd /Users/sergeizh/IdeaProjects/sz-dev-run/
+
+git add .
+git commit -m "upd"
+git push -u origin main

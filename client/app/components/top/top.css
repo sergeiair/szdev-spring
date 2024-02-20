@@ -1,16 +1,33 @@
 
+menu {
+    @media only screen and (max-width: 991px) {
+        position: absolute;
+        top: 15px;
+        right: 50px;
+        width: auto !important;
+        font-size: .8rem;
+    }
+}
+
+.top {
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    height: var(--top-bar-height);
+    backdrop-filter: blur(10px);
+    background-image: linear-gradient(to top, var(--background-trans-color) 0%, var(--background-trans-color) 30%, var(--background-color) 60%, var(--background-color) 75%, var(--primary-pastel) 100%);
+}
 
 .top-logo-wrap {
     @media only screen and (max-width: 991px) {
-        box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
     }
 }
 
 .theme-selector {
     @media only screen and (max-width: 991px) {
         position: absolute;
-        right: 1rem;
-        top:1rem;
+        right: 15px;
+        top: 20px;
     }
 }
 
@@ -27,8 +44,8 @@
     background-position: center;
 
     @media only screen and (max-width: 991px) {
-        width: 120px;
-        height: 60px;
+        width: 70px;
+        height: 70px;
     }
 }
 
@@ -36,6 +53,16 @@
     color: var(--primary-text);
     border-bottom: 1px solid var(--primary-text);
     text-decoration: none;
+    font-weight: 300;
+
+    @media only screen and (max-width: 991px) {
+        font-weight: 600;
+        border-bottom: 0
+    }
+}
+
+.menu-item--active {
+    border-bottom: 1px solid var(--primary);
 }
 
 .menu-item:hover {

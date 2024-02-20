@@ -3,13 +3,13 @@
 [data-theme="light"],
 :root:not([data-theme="dark"]) {
     --primary-text: #1d1d1d;
-    --primary: #d81b60;
-    --primary-darker: #9F073BFF;
+    --secondary-text: #a0a0a0;
     --primary-pastel: #e7c6cf;
-    --primary-hover: #c2185b;
-    --primary-focus: var(--primary-pastel);
-    --primary-inverse: #FFF;
+    --primary-inverse: #fff;
+    --primary-alt-inverse: #1d1d1d;
     --background-color: #FFF;
+    --background-alt-color: #f1f1f1;
+    --background-trans-color: rgba(255, 255, 255, 0.6);
     --primary-pastel-shadow: var(--primary-pastel) 0px 4px 12px;
 }
 
@@ -17,13 +17,13 @@
 @media only screen and (prefers-color-scheme: dark) {
     :root:not([data-theme]) {
         --primary-text: #FFF;
-        --primary: #d81b60;
-        --primary-darker: #9F073BFF;
-        --primary-pastel: #e7c6cf;
-        --primary-hover: #e91e63;
-        --primary-focus: var(--primary-pastel);
+        --secondary-text: #a6a6a6;
+        --primary-pastel: #413035;
         --primary-inverse: #FFF;
+        --primary-alt-inverse: #FFF;
         --background-color: #11191f;
+        --background-alt-color: #1f2a33;
+        --background-trans-color: rgba(17, 25, 31, 0.7);
         --primary-pastel-shadow: none;
     }
 }
@@ -31,19 +31,24 @@
 
 [data-theme="dark"] {
     --primary-text: #FFF;
-    --primary: #d81b60;
-    --primary-darker: #9F073BFF;
-    --primary-pastel: #e7c6cf;
-    --primary-hover: #e91e63;
-    --primary-focus: var(--primary-pastel);
+    --secondary-text: #a6a6a6;
+    --primary-pastel: #413035;
     --primary-inverse: #FFF;
+    --primary-alt-inverse: #FFF;
     --background-color: #11191f;
+    --background-alt-color: #1f2a33;
+    --background-trans-color: rgba(17, 25, 31, 0.7);
     --primary-pastel-shadow: none;
 }
 
 :root {
-    --form-element-active-border-color: var(--primary);
-    --form-element-focus-color: var(--primary-focus);
+    --primary: #de3462 !important;
+    --primary-darker: #b72147;
+    --primary-hover: #b72147!important;
+    --primary-focus: var(--primary-pastel)!important;
+
+    --form-element-active-border-color: var(--primary-focus)!important;
+    --form-element-focus-color: var(--primary-focus)!important;
     --switch-color: var(--primary-inverse);
     --switch-checked-background-color: var(--primary);
     --base-gap: .25rem;
@@ -55,6 +60,9 @@
     --x5-gap: calc(var(--base-gap) * 8);
     --x6-gap: calc(var(--base-gap) * 10);
     --x7-gap: calc(var(--base-gap) * 12);
+    --top-bar-height: 70px;
+    --footer-height: 50px;
+
 }
 
 

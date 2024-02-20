@@ -1,0 +1,15 @@
+.contacts-svg {
+    stroke: var(--primary);
+}
+
+.contacts-link {
+    color: var(--primary-text);
+}
+
+.contacts-link-in {
+    fill: #0a66c2;
+}
+
+.contacts-link-fb {
+    fill: #0866FF;
+}

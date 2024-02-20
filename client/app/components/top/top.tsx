@@ -1,30 +1,43 @@
 import './top.css';
 import ThemeSelect from '~/components/theme-select/theme-select';
-import { Link } from '@remix-run/react';
+import { Link, NavLink } from '@remix-run/react';
+import { ClientOnly } from 'remix-utils/client-only';
 
 export default function Top() {
 	return (
-		<section className={''}>
+		<div className={'top'}>
 			<div className="grid">
-				<div className={'top-logo-wrap'}>
+				{<div className={'top-logo-wrap'}>
 					<Link to={'/'} className={'flex-center p-3 px'}>
-						<div className={'sm-mx-auto top-logo'}/>
+						<span className={'top-logo'}/>
 					</Link>
-				</div>
+				</div>}
 
 				<div className='p-3 px flex-center-center flex-gap-1'>
 					<menu className={'flex-center-center flex-gap-05 p-3 px'}>
-						<Link className={'p-3 px menu-item'} to={'/about'}>
+						<NavLink
+							className={({isActive}) =>
+								`p-3 px menu-item ${isActive ? "menu-item--active" : ""}`
+							}
+							to={'/about'}>
 							About
-						</Link>
+						</NavLink>
+
+						<NavLink className={({isActive}) =>
+							`p-3 px menu-item ${isActive ? "menu-item--active" : ""}`
+						} to={'/contact'}>
+							Contact
+						</NavLink>
 					</menu>
 
 					<div className={'theme-selector'}>
-						<ThemeSelect/>
+						<ClientOnly fallback={null}>
+							{() => <ThemeSelect/>}
+						</ClientOnly>
 					</div>
 				</div>
 			</div>
 
-		</section>
+		</div>
 	);
 }

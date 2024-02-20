@@ -1,0 +1,14 @@
+
+pre.hljs {
+    background-color: var(--background-alt-color);
+    color: var(--primary-alt-inverse);
+    padding: var(--x3-gap);
+}
+
+pre.hljs .hljs-string {
+    color: var(--primary);
+}
+
+pre.hljs span {
+    color: var(--primary-alt-inverse);
+}

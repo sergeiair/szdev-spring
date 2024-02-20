@@ -13,7 +13,7 @@ export async function action({request}: LoaderFunctionArgs) {
 		const posts = service.get(DataCacheKeys.posts) ?? [];
 
 		return json({
-			data: posts.slice(0, 3)
+			data: posts.reverse().slice(0, 3)
 		}, {
 			status: 200,
 		})

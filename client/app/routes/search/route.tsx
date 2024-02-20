@@ -2,7 +2,12 @@ import { json, LoaderFunctionArgs } from '@remix-run/router';
 import { singleton } from '~/utils/singleton.server';
 import { DataCache, DataCacheKeys } from '~/cache/data-cache';
 import { kmpSearch } from '~/utils/3rd/kmpSearch';
+import { EReporter } from '~/exceptions/e-reporter';
+import { HeadersFunction } from '@remix-run/node';
 
+export const headers: HeadersFunction = () => ({
+	"Access-Control-Allow-Origin": "*"
+});
 
 export async function action({request}: LoaderFunctionArgs) {
 	if (request.method !== 'POST') return new Response("Use POST", {
@@ -10,7 +15,7 @@ export async function action({request}: LoaderFunctionArgs) {
 	});
 
 	const service = singleton<DataCache>('dataCache', () => new DataCache());
-	const { searchString } = await request.json();
+	const {searchString} = await request.json();
 	const results = {
 		tags: [],
 		sr: []
@@ -37,12 +42,17 @@ export async function action({request}: LoaderFunctionArgs) {
 			kmpSearch(cleanSearchString, sr.content) >= 0)
 
 		return json({
-			data: results
-		}, {
-			status: 200,
-		})
-	} catch (err: any) {
-		console.error(err.message);
+				data: results
+			}, {
+				status: 200,
+				headers: {
+					"Access-Control-Allow-Origin": "*",
+				},
+			},
+		)
+	} catch (err) {
+		// @ts-ignore
+		EReporter.error(err?.message ?? (err?.toString() ?? ''), 'kmpSearch')
 
 		return json(
 			err, {

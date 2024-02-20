@@ -7,12 +7,30 @@
     margin: 0 auto;
 }
 
+.text-smaller {
+   font-size: .8rem;
+}
+
 .text-primary {
     color: var(--primary);
 }
 
+.text-secondary {
+    color: var(--secondary-text);
+}
+
 .text-main {
     color: var(--color);
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+.sticky-top {
+    position: sticky;
+    top: var(--top-bar-height);
+    background-color: var(--background-color);
 }
 
 @media only screen and (max-width: 991px) {

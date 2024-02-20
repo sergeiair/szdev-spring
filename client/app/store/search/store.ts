@@ -1,5 +1,5 @@
 import { create } from 'zustand'
-import { BASE_LOCAL_URL } from '~/config/constants';
+import { BASE_REMIX_API_URL } from '~/config/constants';
 import { AppHttp } from '~/http/app-http';
 
 
@@ -13,7 +13,7 @@ export const useSearchStore = create((set, get) => ({
 			loading: true
 		})
 
-		const response = await AppHttp.post(`${BASE_LOCAL_URL}/search`, { searchString })
+		const response = await AppHttp.post(`${BASE_REMIX_API_URL}/search`, { searchString })
 		const json = await response.json()
 
 		set({

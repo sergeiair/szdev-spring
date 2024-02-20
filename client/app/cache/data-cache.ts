@@ -1,5 +1,6 @@
 import fs from 'fs';
 import process from 'process';
+import { EReporter } from '~/exceptions/e-reporter';
 
 export enum DataCacheKeys {
 	tags =	'tags',
@@ -41,6 +42,10 @@ export class DataCache {
 			{encoding: 'utf8'},
 			(err: NodeJS.ErrnoException | null, data: Buffer) => {
 				this.set(fileName, data);
+
+				if (err) {
+					EReporter.error(err.message, 'DataCache.loadFile')
+				}
 			});
 	}
 
@@ -49,7 +54,7 @@ export class DataCache {
 			this.#cache.set(fileName, JSON.parse(data.toString().toLowerCase()));
 			console.log(`loaded ${fileName}`)
 		} catch (e: any) {
-			console.error(e.message);
+			EReporter.error(e.message, 'DataCache.set')
 		}
 	}
 }

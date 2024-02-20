@@ -31,7 +31,7 @@ const SearchForm: React.FC<SearchFormProps> = ({}) => {
 					submit();
 				}}>
 
-				<div className={'p-3 search-form'}>
+				<div className={'p-2 search-form'}>
 					<div className={'flex-center-center flex-gap-1 '}>
 						<input
 							className={'search-field flex-3'}

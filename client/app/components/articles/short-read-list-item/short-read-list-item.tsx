@@ -11,7 +11,7 @@ const ShortReadListItem: React.FC<ShortReadItemProps> = ({ shortRead }) => {
 	return (
 		<article>
 			<Link to={`/quick-read/${shortRead.urlAlias}`}>
-				<h2>{shortRead.title}</h2>
+				<h2 className={'clickable-title'}>{shortRead.title}</h2>
 			</Link>
 
 			<div className={'p-3 py'}>

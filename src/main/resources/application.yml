@@ -18,7 +18,7 @@ db:
 logging:
   level:
     root: INFO
-    com.sz.dev: INFO
+    #com.sz.dev: INFO
     #org.springframework.jdbc.core: TRACE
   file:
     name: szdev.log

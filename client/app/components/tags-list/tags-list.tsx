@@ -17,7 +17,7 @@ const TagsList: React.FC<TagsListProps> = ({items,}) => {
 						className={'tag-item-wrap'}>
 						<Link
 							className={'tag-item'}
-							to={`/by-tag/${tag.content}`}
+							to={`/by-tag/${tag.content.toLowerCase()}`}
 							prefetch="intent">
 								{tag.content.charAt(0).toUpperCase() + tag.content.slice(1)}
 						</Link>
